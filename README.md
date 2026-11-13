@@ -26,6 +26,10 @@ go test -count=1 -v ./...
 go vet ./...
 go build -o /tmp/belajar-golang-hello ./cmd/hello
 /tmp/belajar-golang-hello -name Rifki
+
+go run ./cmd/server -addr :8080
+curl 'http://127.0.0.1:8080/healthz'
+curl 'http://127.0.0.1:8080/greet?name=Rifki'
 ```
 
 Output bernama: `Hello, Rifki!`. Tidak ada dependency eksternal, secret, atau layanan pendukung. Jangan commit `.env` maupun database lokal.

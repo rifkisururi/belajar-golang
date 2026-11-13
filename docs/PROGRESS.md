@@ -9,3 +9,9 @@
 - Checkpoint: gunakan `git log -1 --format='%h %s'` untuk hash commit tahap ini dan `git ls-remote origin refs/heads/learning/step-01` untuk membandingkan remote setelah push. Hasil push dilaporkan terpisah; dokumen ini tidak mengasumsikan push sudah berhasil.
 
 Tahap selanjutnya hanya dimulai setelah checkpoint tahap ini berhasil diuji dan di-push.
+
+## Step 02 — HTTP server dan handler
+
+- Implementasi: `internal/httpserver` dengan `/healthz` dan `/greet`, plus `cmd/server`.
+- Verification: table-driven `httptest`, `go test`, `go vet`, build, dan smoke request lokal.
+- Commit: `feat(step-02): add net/http server and handlers`.

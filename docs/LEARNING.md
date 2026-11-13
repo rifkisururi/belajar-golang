@@ -3,7 +3,7 @@
 ## Roadmap bertahap
 
 1. Modul, paket, CLI, dan table-driven tests.
-2. HTTP server berbasis net/http dan endpoint health; uji dengan httptest.
+2. HTTP server berbasis net/http, endpoint health/greet, graceful shutdown, dan httptest.
 3. Konfigurasi environment, log/slog, timeout, dan graceful shutdown.
 4. REST API sederhana dengan penyimpanan in-memory dan validasi input.
 5. context.Context, cancellation, serta explicit dependency injection sesuai kebutuhan.
@@ -25,3 +25,7 @@ Setiap tahap dijelaskan, diimplementasikan, diformat, diuji, diperiksa go vet, d
 **Verification:** jalankan perintah README. `go test -count=1 -v ./...` harus mengeksekusi TestMessage beserta lima subtest. `go vet` memeriksa pola mencurigakan; keberhasilannya bukan pengganti tes perilaku. Jalankan binary untuk membuktikan entry point tersambung ke paket.
 
 **What You Learned:** module path, package boundary, exported function, zero-dependency CLI, flag, standard testing, dan perbedaan fungsi dengan service class.
+
+## Step 02 — HTTP server dan handler
+
+`net/http` menyediakan router dan server di standard library. `httptest` memungkinkan handler diuji tanpa membuka port. `http.Server.Shutdown` menerima `context.Context`, sehingga graceful shutdown memiliki batas waktu eksplisit.
