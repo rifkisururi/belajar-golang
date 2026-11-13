@@ -29,3 +29,7 @@ Setiap tahap dijelaskan, diimplementasikan, diformat, diuji, diperiksa go vet, d
 ## Step 02 — HTTP server dan handler
 
 `net/http` menyediakan router dan server di standard library. `httptest` memungkinkan handler diuji tanpa membuka port. `http.Server.Shutdown` menerima `context.Context`, sehingga graceful shutdown memiliki batas waktu eksplisit.
+
+## Step 03 — Konfigurasi
+
+Environment variable adalah padanan sederhana `appsettings` plus options binding. Go tidak membutuhkan configuration framework untuk dua nilai; fungsi `Load` mengembalikan struct dan error secara eksplisit.
