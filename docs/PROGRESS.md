@@ -20,6 +20,11 @@ Tahap selanjutnya hanya dimulai setelah checkpoint tahap ini berhasil diuji dan 
 - `httpserver.Logging` mengukur durasi request dan mencatat metadata dengan `log/slog`.
 - Commit: `feat(step-04): add structured HTTP logging middleware`.
 
+## Step 05 — REST tasks dan in-memory repository
+
+- Repository, service, JSON handler, validasi title, dan tests.
+- Commit: `feat(step-05): add in-memory tasks REST resource`.
+
 ## Step 02 — HTTP server dan handler
 
 - Implementasi: `internal/httpserver` dengan `/healthz` dan `/greet`, plus `cmd/server`.

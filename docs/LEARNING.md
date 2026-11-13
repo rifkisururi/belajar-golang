@@ -37,3 +37,7 @@ Environment variable adalah padanan sederhana `appsettings` plus options binding
 ## Step 04 — Middleware
 
 Middleware Go adalah fungsi yang menerima `http.Handler` dan mengembalikan handler. Ini mirip ASP.NET Core middleware pipeline, tetapi komposisinya eksplisit dan tidak membutuhkan container.
+
+## Step 05 — Repository dan service
+
+Repository adalah interface kecil yang didefinisikan dekat consumer. `MemoryRepository` memakai mutex untuk akses aman antar-request; service menerima repository secara explicit, tanpa DI container. Handler menerjemahkan JSON dan HTTP status, sementara aturan title tetap berada di repository/service boundary.
