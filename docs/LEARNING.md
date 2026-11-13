@@ -33,3 +33,7 @@ Setiap tahap dijelaskan, diimplementasikan, diformat, diuji, diperiksa go vet, d
 ## Step 03 — Konfigurasi
 
 Environment variable adalah padanan sederhana `appsettings` plus options binding. Go tidak membutuhkan configuration framework untuk dua nilai; fungsi `Load` mengembalikan struct dan error secara eksplisit.
+
+## Step 04 — Middleware
+
+Middleware Go adalah fungsi yang menerima `http.Handler` dan mengembalikan handler. Ini mirip ASP.NET Core middleware pipeline, tetapi komposisinya eksplisit dan tidak membutuhkan container.

@@ -26,7 +26,7 @@ func main() {
 	if *addr != "" {
 		cfg.Addr = *addr
 	}
-	server := &http.Server{Addr: cfg.Addr, Handler: httpserver.New(), ReadHeaderTimeout: 5 * time.Second}
+	server := &http.Server{Addr: cfg.Addr, Handler: httpserver.Logging(slog.Default(), httpserver.New()), ReadHeaderTimeout: 5 * time.Second}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 	go func() {
