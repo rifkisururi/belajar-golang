@@ -1,0 +1,11 @@
+# Progress
+
+## Step 01 — Modul, CLI, dan tes
+
+- Commit yang direncanakan: `feat(step-01): initialize Go module and tested CLI`.
+- Branch: `learning/step-01`.
+- Cakupan: go.mod, CLI, paket greeting, lima subtest, dan dokumentasi awal.
+- Verifikasi wajib: gofmt, go mod tidy, go test ./..., go vet ./..., build, dan pemeriksaan output CLI.
+- Checkpoint: gunakan `git log -1 --format='%h %s'` untuk hash commit tahap ini dan `git ls-remote origin refs/heads/learning/step-01` untuk membandingkan remote setelah push. Hasil push dilaporkan terpisah; dokumen ini tidak mengasumsikan push sudah berhasil.
+
+Tahap selanjutnya hanya dimulai setelah checkpoint tahap ini berhasil diuji dan di-push.
